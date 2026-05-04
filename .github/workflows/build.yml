@@ -1,4 +1,4 @@
-name: Build Windows 7 EXE
+name: Build Windows EXE
 
 on: [push]
 
@@ -21,10 +21,10 @@ jobs:
     
     - name: Build EXE
       run: |
-        pyinstaller --onefile --windowed --clean RANDOM_01.py
+        pyinstaller --onefile --windowed --icon=icon.png --clean RandGen.py
     
     - name: Upload EXE
       uses: actions/upload-artifact@v4
       with:
-        name: Windows7-App
-        path: dist/RANDOM_01.exe
+        name: Windows-App
+        path: dist/RandGen.exe
