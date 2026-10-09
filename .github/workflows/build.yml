@@ -21,10 +21,10 @@ jobs:
     
     - name: Build EXE
       run: |
-        pyinstaller --onefile --windowed --clean RandGen.py
+        pyinstaller --onefile --windowed --clean RandGen2.0.py
     
     - name: Upload EXE
       uses: actions/upload-artifact@v4
       with:
         name: Windows-App
-        path: dist/RandGen.exe
+        path: dist/RandGen2.0.exe
